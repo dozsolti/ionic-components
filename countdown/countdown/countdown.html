@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="background"></div>
+
+  <div class="bar" [hidden]="!this.isBar" [style.height]="this.getPercent()+'%'" [style.opacity]="0.2+this.getPercent()/100"></div>
+
+  <div class="body">
+    <div class="timer" [hidden]="hideTime" [style.color]="this.textColor">
+      {{this.getTimeString()}}
+    </div>
+  </div>
+  <div class="footer">
+    <button (click)="toggleStart()" [style.color]="this.textColor">{{this.buttonTexts[this.status]}}</button>
+  </div>
+</div>
